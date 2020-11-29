@@ -79,16 +79,11 @@ def CheckURI(uri, timeout=5):
     '''
 
     # 1. Write this function.  Delete the following line.
-
-    reachable = ''
     try:
         reachable = requests.get(uri)
 
-        if(reachable.status_code == 200):
+        if reachable.status_code == 200:
             return True
-        else:
-            return False
-
     except MissingSchema as schema:
         print("The schema is not in the url insert it ")
         return False
