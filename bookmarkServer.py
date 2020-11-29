@@ -80,7 +80,7 @@ def CheckURI(uri, timeout=5):
 
     # 1. Write this function.  Delete the following line.
     try:
-        reachable = requests.get(uri , timeout)
+        reachable = requests.get(uri , timeout=timeout)
 
         if reachable.status_code == 200:
             return True
